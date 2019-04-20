@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>Oceane's log</title>
+	<link href="style.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+	<section>
+		<h1>Oceane's log</h1>
+		<p>I am sharing below what I am doing everyday to learn programming.</p>
+
+		<p>I will try as well to write a few small posts to explain concepts I have learned and make it as clear as possible.</p>
+
+		<p>For the moment, I like this single page because it is minimalist. I will think later about using static site generators such as Jekyll.</p>
+
+		<ul>
+			<li><a href="#prototype">prototype</a></li>
+			<li><a href="#scopes">scopes, globals, locals, closure</a></li>
+			<li><a href="#noConflict">share data with IIFE / noConflict</a></li>
+			<li><a href="#iife">IIFE</a></li>
+			<li><a href="#constructor">constructor</a></li>
+			<li><a href="#event">event loop</a></li>
+			<li><a href="#this">this</a></li>
+			<li><a href="#higher-order">higher-order function / callback function</a></li>
+			<li><a href="#comparaisons">data types and comparaisons</a></li>
+			<li><a href="#method">method</a></li>
+		</ul>
+	</section>
+
+	<section id="logs">
+		<ul>
+			<li>20/04/2019 - wrote Scopes post in my log page and added my first snippet! | watched W&C accountingJS videos 8-11</li>
+			<li>19/04/2019 - began my log page | watched W&C accountingJS videos 6-7</li>
+		</ul>
+	</section>
+
+	<section id="scopes">
+		<h2>Scopes, locals, closures, globals</h2>
+		<p><strong>Scope</strong> determines the visibility of one variable. Variables defined inside a function are not accessible from outside the function.</p>
+		<p>Variables declared within a function become <strong>local</strong> to the function. Function can always remember the variables that they could see at creation.</p>
+		<p>A variable declared outside a function becomes <strong>global</strong>. All scripts and functions on a webpage can access it. These variables are saved in the window.</p>
+		<p>Variables that are not declared in a function but that are not global are <strong>closures</strong>.</p>
+		<script src="https://gist.github.com/oyane806/a16a43fed2357a2d36d3dcc9cb2ac728.js"></script>
+
+		<br />
+		<hr />
+		<p><a href="https://www.linkedin.com/in/oceanevelon/">Linkedin</a> &nbsp; <g:plusone size="medium"></g:plusone></p>
+	</section>
+</body>
+</html>
