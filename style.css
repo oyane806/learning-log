@@ -1,4 +1,8 @@
 /* Borrowed from Markdown.css: http://kevinburke.bitbucket.org/markdowncss/markdown.css */
+img {
+  max-width: 50%;
+  height: auto;
+}
 body{
     margin: 0 auto;
     font-family: Georgia, Palatino, serif;

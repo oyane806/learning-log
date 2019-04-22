@@ -32,10 +32,29 @@
 
 	<section id="logs">
 		<ul>
+			<li>22/04/2019 - wrote about prototypes in my log page | watched W&C accountingJS videos 15-16</li>
 			<li>21/04/2019 - wrote my notes about constructors in my log page | watched W&C accountingJS videos 12-14</li>
 			<li>20/04/2019 - wrote Scopes post in my log page and added my first snippet! | watched W&C accountingJS videos 8-11</li>
 			<li>19/04/2019 - began my log page | watched W&C accountingJS videos 6-7</li>
 		</ul>
+	</section>
+
+	<section id="prototype">
+		<h2>Prototype</h2>
+		<p>In Javascript, <strong>prototypes</strong> are objects that facilitate linking of objects and delegation of methods or properties. All Javascript objects inherit properties and methods from a prototype. As illustrated in the image below, Array objects inherit from an Array.prototype that inherits from an Object.prototype.</p>
+		<img src="img/prototype1.jpg">
+		<script src="https://gist.github.com/oyane806/9c0a2bb611a7146ecb46dfee2d77ec98.js"></script>
+		<p>Using prototypes makes it easier to distinguish between unique vs shared properties.</p>
+		<script src="https://gist.github.com/oyane806/8002da2509f0b3f9f5606515a10586d6.js"></script>
+		<img src="img/prototype2.jpg">
+		<img src="img/prototype3.jpg" style="max-width:25%;">
+	</section>
+
+	<section id="constructor">
+		<h2>Constructor</h2>
+		<p>When we need to create many objects with the same type. We can use an object <strong>constructor</strong> function to create a blueprint.</p>
+		<p>Constructors automatically set this to a fresh new object and return the object at the end.</p>
+		<script src="https://gist.github.com/oyane806/e1cdba5d920c607a0336b96409b9910c.js"></script>
 	</section>
 
 	<section id="scope">
@@ -45,14 +64,6 @@
 		<p>A variable declared outside a function becomes <strong>global</strong>. All scripts and functions on a webpage can access it. These variables are saved in the window.</p>
 		<p>Variables that are not declared in a function but that are not global are <strong>closures</strong>.</p>
 		<script src="https://gist.github.com/oyane806/a16a43fed2357a2d36d3dcc9cb2ac728.js"></script>
-	</section>
-
-	<section id="constructor">
-		<h2>Constructor</h2>
-		<p>When we need to create many objects with the same type. We can use an object constructor function to create a blueprint.</p>
-		<p>Constructors automatically set this to a fresh new object and return the object at the end.</p>
-		<script src="https://gist.github.com/oyane806/e1cdba5d920c607a0336b96409b9910c.js"></script>
-
 	</section>
 
 		<br />
