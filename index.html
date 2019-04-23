@@ -17,6 +17,9 @@
 		<p>For the moment, I like this single page because it is minimalist. I will think later about using static site generators such as Jekyll.</p>
 
 		<ul>
+			<li><a href="#regex">regex</a></li>
+			<li><a href="#recursion">recursion</a></li>
+			<li><a href="#numbers">numbers</a></li>
 			<li><a href="#prototype">prototype</a></li>
 			<li><a href="#scope">scopes, globals, locals, closure</a></li>
 			<li><a href="#noConflict">share data with IIFE / noConflict</a></li>
@@ -32,6 +35,7 @@
 
 	<section id="logs">
 		<ul>
+			<li>23/04/2019 - updated prototype post and wrote a method note | watched W&C accountingJS videos 17-18 | learned the basics about Node.js and Express
 			<li>22/04/2019 - wrote about prototypes in my log page | watched W&C accountingJS videos 15-16</li>
 			<li>21/04/2019 - wrote my notes about constructors in my log page | watched W&C accountingJS videos 12-14</li>
 			<li>20/04/2019 - wrote Scopes post in my log page and added my first snippet! | watched W&C accountingJS videos 8-11</li>
@@ -41,13 +45,16 @@
 
 	<section id="prototype">
 		<h2>Prototype</h2>
-		<p>In Javascript, <strong>prototypes</strong> are objects that facilitate linking of objects and delegation of methods or properties. All Javascript objects inherit properties and methods from a prototype. As illustrated in the image below, Array objects inherit from an Array.prototype that inherits from an Object.prototype.</p>
-		<img src="img/prototype1.jpg">
+		<p>In Javascript, <strong>prototypes</strong> are objects that facilitate linking of objects and delegation of methods or properties.</p>
+		<p>When we create a new array in Javascript, a lot is done behind the scenes. A new array is created thanks to Array.prototype that contains the Array constructor and specific methods used by Array objects. This Array.prototype is linked to the Object.prototype.</p>
+		<img src="img/prototype1.JPG">
+		<p>As illustrated in the image, Array objects inherit from an Array.prototype that inherits from an Object.prototype. When a method or property is called on an Array object, Javascript will first try to find the properties or methods called in the Array object, then in the Array.prototype, finally in the Object.prototype.</p>
+
 		<script src="https://gist.github.com/oyane806/9c0a2bb611a7146ecb46dfee2d77ec98.js"></script>
-		<p>Using prototypes makes it easier to distinguish between unique vs shared properties.</p>
+		<p>Using prototypes makes it easier to distinguish between unique vs shared properties. In the example below, we can decide to remove the meow method from the constructor Cat and add it to the prototype Cat.prototype. By using this technique, all the new objects created with the constructor will not contain the method meow anymore. It will be stored in the Cat.prototype.
+		<img src="img/prototype2.JPG">
+		<img src="img/prototype3.JPG" style="max-width:25%;">
 		<script src="https://gist.github.com/oyane806/8002da2509f0b3f9f5606515a10586d6.js"></script>
-		<img src="img/prototype2.jpg">
-		<img src="img/prototype3.jpg" style="max-width:25%;">
 	</section>
 
 	<section id="constructor">
@@ -64,6 +71,12 @@
 		<p>A variable declared outside a function becomes <strong>global</strong>. All scripts and functions on a webpage can access it. These variables are saved in the window.</p>
 		<p>Variables that are not declared in a function but that are not global are <strong>closures</strong>.</p>
 		<script src="https://gist.github.com/oyane806/a16a43fed2357a2d36d3dcc9cb2ac728.js"></script>
+	</section>
+
+	<section id="method">
+		<h2>Method</h2>
+		<p><strong>Methods</strong> are simply properties equal to a function in an object.</p>
+		<script src="https://gist.github.com/oyane806/44622aa764001b527ecaa3e07339f381.js"></script>
 	</section>
 
 		<br />
