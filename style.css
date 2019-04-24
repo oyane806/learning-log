@@ -1,7 +1,15 @@
 /* Borrowed from Markdown.css: http://kevinburke.bitbucket.org/markdowncss/markdown.css */
+
+#navigation {
+    max-width: 580px;
+    border-spacing: 0px;
+    margin: 0px;
+}
+
 img {
-  max-width: 50%;
+  max-width: 580px;
   height: auto;
+  width: 100%;
 }
 body{
     margin: 0 auto;
@@ -24,7 +32,7 @@ h1 {
 }
 h2 {
     font-size: 36px;
-    margin: 24px 0 6px;
+    /*margin: 24px 0 6px;*/
 }
 h3 {
     font-size: 24px;
@@ -91,12 +99,12 @@ a:hover, a:focus { outline:none; color:#e25525 }
 section {
 	padding:0 0 10px;
 }
-table{width:100%;margin-bottom:18px;padding:0;text-align:left;border-collapse:separate;font-size:13px;}table th,table td{padding:10px 10px 9px;line-height:13.5px;vertical-align:middle;border-bottom:1px solid #ddd;}
+table{width:100%;margin-bottom:18px;padding:0;text-align:left;border-collapse:separate;font-size:13px;}table th,table td{/*padding:10px 10px 9px;*/line-height:13.5px;vertical-align:middle;/*border-bottom:1px solid #ddd;*/}
 table th{padding-top:9px;font-weight:bold;border-bottom-width:2px;}
 
 td {
 	white-space:pre;
-	font-family:monospace;
+	/*font-family:monospace;*/
 }
 
 .pln{color:#222}
@@ -156,6 +164,7 @@ body .gist .gist-file {
     margin-bottom: 0;
     border: 1px dashed #adb5bd;
     border-radius: 0;
+    max-width: 580px;
 }
 
 body .gist .gist-data {
