@@ -1,112 +1,110 @@
 <!doctype html>
 <html lang="en" class="no-js">
-<head>
-	<meta charset="utf-8">
-	<title>Oceane's log</title>
-	<link href="style.css" rel="stylesheet"/>
 
+<head>
+    <meta charset="utf-8">
+    <title>Oceane's log</title>
+    <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-	<section id="beginning">
-		<h1>Oceane's log</h1>
-		<p>I am sharing below what I am doing everyday to learn programming.</p>
-
-		<p>I will try as well to write a few small posts to explain concepts I have learned and make it as clear as possible.</p>
-
-		<p>For the moment, I like this single page because it is minimalist. I will think later about using static site generators such as Jekyll.</p>
-
-		<ul>
-			<li><a href="#regex">regex</a></li>
-			<li><a href="#recursion">recursion</a></li>
-			<li><a href="#numbers">numbers</a></li>
-			<li><a href="#prototype">prototype</a></li>
-			<li><a href="#scope">scopes, globals, locals, closure</a></li>
-			<li><a href="#noConflict">share data with IIFE / noConflict</a></li>
-			<li><a href="#iife">IIFE</a></li>
-			<li><a href="#constructor">constructor</a></li>
-			<li><a href="#event">event loop</a></li>
-			<li><a href="#this">this</a></li>
-			<li><a href="#higher-order">higher-order function / callback function</a></li>
-			<li><a href="#comparaisons">data types and comparaisons</a></li>
-			<li><a href="#method">method</a></li>
-		</ul>
-	</section>
-
-	<section id="logs">
-		<ul>
-			<li>24/04/2019 - made images responsive and added a top link to facilitate navigation | watched W&C accountingJS videos 19-21</li>
-			<li>23/04/2019 - updated prototype post and wrote a method note | watched W&C accountingJS videos 17-18 | learned the basics about Node.js and Express</li>
-			<li>22/04/2019 - wrote about prototypes in my log page | watched W&C accountingJS videos 15-16</li>
-			<li>21/04/2019 - wrote my notes about constructors in my log page | watched W&C accountingJS videos 12-14</li>
-			<li>20/04/2019 - wrote Scopes post in my log page and added my first snippet! | watched W&C accountingJS videos 8-11</li>
-			<li>19/04/2019 - began my log page | watched W&C accountingJS videos 6-7</li>
-		</ul>
-	</section>
-
-	<section id="prototype">
-	<table id="navigation">
-    	<tr>
-      		<td><h2>Prototype</h2></td>
-      		<td><a href="#beginning">top</a></td>
-    	</tr>
-    </table>
-
-		<p>In Javascript, <strong>prototypes</strong> are objects that facilitate linking of objects and delegation of methods or properties.</p>
-		<p>When we create a new array in Javascript, a lot is done behind the scenes. A new array is created thanks to Array.prototype that contains the Array constructor and specific methods used by Array objects. This Array.prototype is linked to the Object.prototype.</p>
-		<img src="img/prototype1.JPG">
-		<p>As illustrated in the image, Array objects inherit from an Array.prototype that inherits from an Object.prototype. When a method or property is called on an Array object, Javascript will first try to find the properties or methods called in the Array object, then in the Array.prototype, finally in the Object.prototype.</p>
-
-		<script src="https://gist.github.com/oyane806/9c0a2bb611a7146ecb46dfee2d77ec98.js"></script>
-		<p>Using prototypes makes it easier to distinguish between unique vs shared properties. In the example below, we can decide to remove the meow method from the constructor Cat and add it to the prototype Cat.prototype. By using this technique, all the new objects created with the constructor will not contain the method meow anymore. It will be stored in the Cat.prototype.</p>
-		<img src="img/prototype2.JPG" style="display:block;">
-		<img src="img/prototype3.JPG" style="max-width:300px;">
-		<script src="https://gist.github.com/oyane806/8002da2509f0b3f9f5606515a10586d6.js"></script>
-	</section>
-
-	<section id="constructor">
-	<table id="navigation">
-    	<tr>
-      		<td><h2>Constructor</h2></td>
-      		<td><a href="#beginning">top</a></td>
-    	</tr>
-    </table>
-
-		<p>When we need to create many objects with the same type. We can use an object <strong>constructor</strong> function to create a blueprint.</p>
-		<p>Constructors automatically set this to a fresh new object and return the object at the end.</p>
-		<script src="https://gist.github.com/oyane806/e1cdba5d920c607a0336b96409b9910c.js"></script>
-	</section>
-
-	<section id="scope">
-	<table id="navigation">
-    	<tr>
-      		<td><h2>Scopes</h2></td>
-      		<td><a href="#beginning">top</a></td>
-    	</tr>
-    </table>
-
-		<p><strong>Scope</strong> determines the visibility of one variable. Variables defined inside a function are not accessible from outside the function.</p>
-		<p>Variables declared within a function become <strong>local</strong> to the function. Function can always remember the variables that they could see at creation.</p>
-		<p>A variable declared outside a function becomes <strong>global</strong>. All scripts and functions on a webpage can access it. These variables are saved in the window.</p>
-		<p>Variables that are not declared in a function but that are not global are <strong>closures</strong>.</p>
-		<script src="https://gist.github.com/oyane806/a16a43fed2357a2d36d3dcc9cb2ac728.js"></script>
-	</section>
-
-	<section id="method">
-	<table id="navigation">
-    	<tr>
-      		<td><h2>Method</h2></td>
-      		<td><a href="#beginning">top</a></td>
-    	</tr>
-    </table>
-
-		<p><strong>Methods</strong> are simply properties equal to a function in an object.</p>
-		<script src="https://gist.github.com/oyane806/44622aa764001b527ecaa3e07339f381.js"></script>
-	</section>
-
-		<br />
-		<hr />
-		<p><a href="https://www.linkedin.com/in/oceanevelon/"> Linkedin</a> &nbsp; <g:plusone size="medium"></g:plusone></p>
-
+    <section id="beginning">
+        <h1>Oceane's log</h1>
+        <p>I am sharing below what I am doing everyday to learn programming.</p>
+        <p>I will try as well to write a few small posts to explain concepts I have learned and make it as clear as possible.</p>
+        <p>For the moment, I like this single page because it is minimalist. I will think later about using static site generators such as Jekyll.</p>
+        <ul>
+            <li><a href="#regex">regex lookahead / back references / constructor</a></li>
+            <li><a href="#regex literal">regex literal</a></li>
+            <li><a href="#recursion">recursion</a></li>
+            <li><a href="#numbers">numbers</a></li>
+            <li><a href="#prototype">prototype</a></li>
+            <li><a href="#scope">scopes, globals, locals, closure</a></li>
+            <li><a href="#noConflict">share data with IIFE / noConflict</a></li>
+            <li><a href="#iife">IIFE</a></li>
+            <li><a href="#constructor">constructor</a></li>
+            <li><a href="#event">event loop</a></li>
+            <li><a href="#this">this</a></li>
+            <li><a href="#higher-order">higher-order function / callback function</a></li>
+            <li><a href="#comparaisons">data types and comparaisons</a></li>
+            <li><a href="#method">method</a></li>
+        </ul>
+    </section>
+    <br>
+    <section id="logs">
+        <ul>
+            <li>25/04/2019 - simplified the css of my log page | watched W&C accountingJS videos 22-23</li>
+            <li>24/04/2019 - made images responsive and added a top link to facilitate navigation in my log page | watched W&C accountingJS videos 19-21</li>
+            <li>23/04/2019 - updated prototype post and wrote a method note in my log page | watched W&C accountingJS videos 17-18 | learned the basics about Node.js and Express</li>
+            <li>22/04/2019 - wrote about prototypes in my log page | watched W&C accountingJS videos 15-16</li>
+            <li>21/04/2019 - wrote my notes about constructors in my log page | watched W&C accountingJS videos 12-14</li>
+            <li>20/04/2019 - wrote Scopes post in my log page and added my first snippet! | watched W&C accountingJS videos 8-11</li>
+            <li>19/04/2019 - began my log page | watched W&C accountingJS videos 6-7</li>
+        </ul>
+    </section>
+    <section id="prototype">
+        <table id="navigation">
+            <tr>
+                <td>
+                    <h2>Prototype</h2>
+                </td>
+                <td><a href="#beginning">top</a></td>
+            </tr>
+        </table>
+        <p>In Javascript, <strong>prototypes</strong> are objects that facilitate linking of objects and delegation of methods or properties.</p>
+        <p>When we create a new array in Javascript, a lot is done behind the scenes. A new array is created thanks to Array.prototype that contains the Array constructor and specific methods used by Array objects. This Array.prototype is linked to the Object.prototype.</p>
+        <img src="img/prototype1.JPG">
+        <p>As illustrated in the image, Array objects inherit from an Array.prototype that inherits from an Object.prototype. When a method or property is called on an Array object, Javascript will first try to find the properties or methods called in the Array object, then in the Array.prototype, finally in the Object.prototype.</p>
+        <script src="https://gist.github.com/oyane806/9c0a2bb611a7146ecb46dfee2d77ec98.js"></script>
+        <p>Using prototypes makes it easier to distinguish between unique vs shared properties. In the example below, we can decide to remove the meow method from the constructor Cat and add it to the prototype Cat.prototype. By using this technique, all the new objects created with the constructor will not contain the method meow anymore. It will be stored in the Cat.prototype.</p>
+        <img src="img/prototype2.JPG" style="display:block;">
+        <img src="img/prototype3.JPG" style="max-width:300px;">
+        <script src="https://gist.github.com/oyane806/8002da2509f0b3f9f5606515a10586d6.js"></script>
+    </section>
+    <section id="constructor">
+        <table id="navigation">
+            <tr>
+                <td>
+                    <h2>Constructor</h2>
+                </td>
+                <td><a href="#beginning">top</a></td>
+            </tr>
+        </table>
+        <p>When we need to create many objects with the same type. We can use an object <strong>constructor</strong> function to create a blueprint.</p>
+        <p>Constructors automatically set this to a fresh new object and return the object at the end.</p>
+        <script src="https://gist.github.com/oyane806/e1cdba5d920c607a0336b96409b9910c.js"></script>
+    </section>
+    <section id="scope">
+        <table id="navigation">
+            <tr>
+                <td>
+                    <h2>Scopes</h2>
+                </td>
+                <td><a href="#beginning">top</a></td>
+            </tr>
+        </table>
+        <p><strong>Scope</strong> determines the visibility of one variable. Variables defined inside a function are not accessible from outside the function.</p>
+        <p>Variables declared within a function become <strong>local</strong> to the function. Function can always remember the variables that they could see at creation.</p>
+        <p>A variable declared outside a function becomes <strong>global</strong>. All scripts and functions on a webpage can access it. These variables are saved in the window.</p>
+        <p>Variables that are not declared in a function but that are not global are <strong>closures</strong>.</p>
+        <script src="https://gist.github.com/oyane806/a16a43fed2357a2d36d3dcc9cb2ac728.js"></script>
+    </section>
+    <section id="method">
+        <table id="navigation">
+            <tr>
+                <td>
+                    <h2>Method</h2>
+                </td>
+                <td><a href="#beginning">top</a></td>
+            </tr>
+        </table>
+        <p><strong>Methods</strong> are simply properties equal to a function in an object.</p>
+        <script src="https://gist.github.com/oyane806/44622aa764001b527ecaa3e07339f381.js"></script>
+    </section>
+    <br />
+    <hr />
+    <p><a href="https://www.linkedin.com/in/oceanevelon/"> Linkedin</a> &nbsp; <g:plusone size="medium"></g:plusone>
+    </p>
 </body>
+
 </html>
