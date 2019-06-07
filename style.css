@@ -28,14 +28,21 @@ h2 {
     font-size: 30px;
 }
 
-p,
-ul {
+p {
     font-size: 16px;
     line-height: 24px;
 }
+ul {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.done {
+    color: #D420AB;
+}
 
 a {
-    color: #0099ff;
+    color: #10eaf0;
     margin: 0;
     padding: 0;
     vertical-align: baseline;
@@ -44,7 +51,7 @@ a {
 a:hover,
 a:focus {
     outline: none;
-    color: #e25525
+    color: #0099ff; /*#e25525*/
 }
 
 ul {
